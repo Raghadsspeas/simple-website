@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+    body{background-color: WhiteSmoke;}
+* {
+  box-sizing: border-box;
+}
+    input[type=password]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=text], select, textare {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label{
+            font-family: Felix titling, sans-serif;
+            text-shadow: 2px 2px 5px Wheat;
+            color: black;
+            text-align: center;
+            font-size: 25px;
+        }
+
+input[type=submit]{
+            background-color: SteelBlue;
+           border: none;
+            border-width: 5px;
+            border-color:cornsilk;
+            border-radius: 8px;
+           padding: 5px;
+          color: Gold;
+            padding: 16px 32px;
+            font-family: Verdana, sans-serif;
+  
+             cursor: pointer;
+              font-weight: bold;
+            margin:4px 2px;
+            
+           
+  
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  
+  
+            
+        }
+        input[type=submit]:hover {
+  background-color: SkyBlue;
+  color: Gold;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: Gainsboro;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    h1 {
+  text-indent: 50px;
+            font-family: "Sofia", sans-serif;
+            font-size: 60px;
+            
+           text-shadow: 2px 2px 5px Wheat;
+            color: forestgreen;
+             
+            
+}
+</style>
+</head>
+<body>
+
+     <table align=center>
+        <tr>
+        <td align="center">
+            <h1>LOG IN</h1>
+            </td>
+        </tr>
+        
+        
+        </table>
+
+
+<div class="container">
+  <form action="project3.php" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="id">ID</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="id" name="ID" placeholder="Your ID..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="password">Password</label>
+    </div>
+    <div class="col-75">
+      <input type="password" id="password" name="Password" placeholder="Your password.."> 
+        
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      
+    </div>
+    <div class="col-75">
+      
+        <input type="checkbox" onclick="myFunction()">Show Password<br>
+        <a href="#" > forget your password?</a>
+    </div>
+  </div>
+     <script>
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script> 
+ 
+  <br>
+  <div class="row">
+    <a href="project4.html"> <input type="submit" name="stulogin" value="Log Up as student"></a><a href="project5.html"> <input type="submit" name="doclogin" value="Log Up as doctor"></a>
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
